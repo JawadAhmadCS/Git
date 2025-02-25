@@ -259,4 +259,7 @@ git log
 
 ---
 
+For more details, see: [Git Tutorial](https://youtu.be/Ez8F0nW6S-w?si=OXPF4o0uX75L0PQG)
+
+This **README.md** file contains a summary of important Git commands.
 
