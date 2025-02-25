@@ -4,10 +4,12 @@
 Git is a **free**, **open-source** **version control system** used for tracking changes in code.
 
 ## 2. Configuring Git
-Before using Git, set up your username and email:
+Before using Git, set up your username and email on git-bash:
 ```bash
  git config --global user.name "JawadAhmadCS"
- git config --global user.email "mjawadahmad41@gmail.com"
+```
+```bash
+ git config --global user.email "youremail@gmail.com"
 ```
 To check the configured values:
 ```bash
@@ -18,24 +20,25 @@ To check the configured values:
 ### Cloning an Existing Repository (GitHub to Local)
 1. Open **VS Code**
 2. Create a **new folder**
-3. Open **terminal** and run:
+3. **Copy link** of repositry from github
+4. Open **terminal** and run:
    ```bash
-   git clone https://github.com/JawadAhmadCS/Git.git
+   git clone <repository-url>
    ```
    This will add the repository folder to the local system.
 
-4. Navigate inside the project folder:
+5. Navigate inside the project folder:
    ```bash
    cd Git
    ```
 
 ### Creating a New Local Repository
 If you want to create a repository locally and push it to GitHub:
-1. Inside **VS Code**, run:
+1. Inside **VS Code**, create repositry run:
    ```bash
    git init
    ```
-   This initializes an empty Git repository.
+   This initializes an Git repository.
 2. Create a repository on **GitHub** (without README file).
 3. Link the local repository to GitHub:
    ```bash
@@ -48,8 +51,9 @@ If you want to create a repository locally and push it to GitHub:
 
 ## 4. Basic Git Commands
 ### Checking File Status
+Displays the status of the working directory
 ```bash
-git status  # Displays the status of the working directory
+git status  
 ```
 #### Git Status Categories:
 - **Untracked**: New file that Git doesn’t track yet.
@@ -58,20 +62,26 @@ git status  # Displays the status of the working directory
 - **Unmodified**: No changes.
 
 ### Adding Files to Staging
+Stages all changes
 ```bash
-git add .              # Stages all changes
-git add README.md      # Stages a specific file
+git add .              
+```
+
+Stages a specific file
+```bash
+git add README.md      
 ```
 
 ### Committing Changes
 ```bash
-git commit -m "Updated README.md"
+git commit -m "your message like:Updated README.md"
 ```
 **Commit**: Records changes in the repository.
 
 ### Pushing Changes to Remote Repository
+Uploads local commits to the remote repository
 ```bash
-git push origin main  # Uploads local commits to the remote repository
+git push origin main  
 ```
 
 ### Pushing for the First Time
@@ -88,26 +98,28 @@ git push -u origin main
 git branch
 ```
 ### Creating a New Branch
+Creates and switches to a new branch
 ```bash
-git checkout -b feature2  # Creates and switches to a new branch
+git checkout -b branchname  
 ```
 ### Switching Between Branches
 ```bash
-git checkout feature1
+git checkout branchname
 ```
 ### Renaming a Branch
 ```bash
-git branch -M main
+git branch -M branchname
 ```
 ### Deleting a Branch
 ```bash
-git branch -d feature1
+git branch -d branchname
 ```
 
 ## 6. Merging and Pull Requests
 ### Merging Branches Locally
+Merges the 'main' branch into the current branch
 ```bash
-git merge main  # Merges the 'main' branch into the current branch
+git merge main  
 ```
 ### Creating a Pull Request on GitHub
 1. Go to **GitHub repository**.
@@ -124,8 +136,9 @@ This fetches and updates the local repository.
 
 ## 8. Viewing and Resetting Commits
 ### Viewing Commit History
+Shows commit history
 ```bash
-git log  # Shows commit history
+git log  
 ```
 ### Resetting Commits
 #### Reset a specific file
@@ -140,6 +153,7 @@ git reset HEAD~1
 ```bash
 git reset <commit-hash>
 ```
+this will come by  `git log` history like `git reset 8ff56fa491010809508f1ee147b7d38387035ee6`
 #### Reset Hard (removes all changes)
 ```bash
 git reset --hard <commit-hash>
@@ -147,13 +161,18 @@ git reset --hard <commit-hash>
 
 ## 9. Other Useful Commands
 ### Clearing Terminal
+Clears the terminal screen
 ```bash
-clear  # Clears the terminal screen
+clear  
 ```
 ### Listing Files in a Directory
+Shows all files in the directory
 ```bash
-ls      # Shows all files in the directory
-ls -a   # Shows hidden files as well
+ls      
+```
+Shows hidden files as well
+```bash
+ls -a   
 ```
 ### Comparing Current Branch with Main
 ```bash
@@ -165,9 +184,7 @@ git diff main
 
 ---
 
-# README.md
-
-## Git Commands Cheat Sheet
+# Git Commands Cheat Sheet
 
 ### Setting Up Git
 ```bash
@@ -226,9 +243,13 @@ git branch -d old-branch
 ```
 
 ### Resetting Commits
+ Undo last commit
 ```bash
-git reset HEAD~1  # Undo last commit
-git reset --hard <commit-hash>  # Reset to a specific commit
+git reset HEAD~1 
+```
+Reset to a specific commit
+```bash
+git reset --hard <commit-hash>  
 ```
 
 ### Viewing Commit History
@@ -238,4 +259,4 @@ git log
 
 ---
 
-This **README.md** file contains a summary of important Git commands. Save it in your repository for quick reference!
+
