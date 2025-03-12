@@ -158,8 +158,34 @@ this will come by  `git log` history like `git reset 8ff56fa491010809508f1ee147b
 ```bash
 git reset --hard <commit-hash>
 ```
+## 9. Pull Latest Changes from Upstream  
 
-## 9. Other Useful Commands
+First, switch to the main branch:  
+
+```bash  
+git checkout main  
+```  
+
+Then, fetch the latest updates from upstream:  
+
+```bash  
+git fetch upstream  
+```  
+
+Merge the upstream main branch updates:  
+
+```bash  
+git merge upstream/main  
+```  
+
+If there are any conflicts, resolve them manually and then:  
+
+```bash  
+git add .  
+git commit -m "Merged upstream changes"  
+```  
+
+## 10. Other Useful Commands
 ### Clearing Terminal
 Clears the terminal screen
 ```bash
@@ -179,7 +205,7 @@ ls -a
 git diff main
 ```
 
-## 10. Forking a Repository
+## 11. Forking a Repository
 **Forking**: Copying someone else’s GitHub repository to your account to modify it independently.
 
 ---
@@ -226,6 +252,23 @@ git push origin main
 ```bash
 git pull origin main
 ```
+
+```bash  
+git checkout main  
+```  
+
+```bash  
+git fetch upstream  
+```   
+
+```bash  
+git merge upstream/main  
+```   
+
+```bash  
+git add .  
+git commit -m "Merged upstream changes"  
+```  
 
 ### Creating and Switching Branches
 ```bash
